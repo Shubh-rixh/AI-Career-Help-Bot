@@ -35,24 +35,24 @@ class Counsellor:
             elif(self.interest == "med" and self.exam == "neet"):
                 return self._suggest_for_neet()
             else:
-                print("! Suggestion: Go for private colleges or Try again next year")
+                return "! Suggestion: Go for private colleges or Try again next year"
 
     def _suggest_for_jee(self):
                 if(self.marks >= 90):
-                    print("Suggestion: Go for IITs, NITs, IIITs or Top tier GFTIs")
+                    return "Suggestion: Go for IITs, NITs, IIITs or Top tier GFTIs"
                 elif(self.marks <= 90 and self.category in ["sc", "st", "obc"]):
-                    print("Suggestion: Go for Low tier GFTIs or if belong to category still try for top tier colleges, else try other tech related courses")
+                    return "Suggestion: Go for Low tier GFTIs or if belong to category still try for top tier colleges, else try other tech related courses"
                 else:
-                    print("Suggestion: If possible go for private colleges, else try again next year")
+                    return "Suggestion: If possible go for private colleges, else try again next year"
             
 
     def _suggest_for_neet(self):
            if (self.marks >= 650):
-                print("Suggestion: Go for MBBS from AIIMS or Top tier GMCs")
+                return "Suggestion: Go for MBBS from AIIMS or Top tier GMCs"
            elif (self.marks < 650 and self.category in ["sc", "st", "obc"]):
-                 print("Suggestion: Go for BDS/BHMS/BAMS or if belong to category (SC/ST/OBC) still try for AIIMS")
+                 return "Suggestion: Go for BDS/BHMS/BAMS or if belong to category (SC/ST/OBC) still try for AIIMS"
            else:
-                print("Suggestion: Try private colleges (if possible) else try again next year")
+                return "Suggestion: Try private colleges (if possible) else try again next year"
 
 
 # ------------------------- BUTTON ACTION ----------------------
